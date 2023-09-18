@@ -1,0 +1,73 @@
+Set-1
+📚📙Selenium Basic Interview Questions
+1) Difference between Assert and Verify
+2) Difference between Close and Quit
+3) Difference between Absolute Xpath and Relative Xpath
+4) Difference between GetWindowHandle and GetWindowHandles
+5) Difference between Xpath and CSS selector
+6) Difference between FindElement and FindElements
+7) Difference between to() and get() method
+8) What are different types of locators
+8) What are different types of Xpath
+9) What are different Xpath Axes
+10) Explain Selenium Architecture
+11) How to Take screenshot in Selenium
+12) What are different mathods of WebDriver
+13) What are different method of webElement
+14) What are different methods in Select Class. How to handle Dynamic dropdown
+15) What are different methods in Action class
+16) What is the difference between getText and getAttribute
+17) What are different types of Wait. Write down Syntax
+18) How to handle windows in Selenium
+19) How to handle Popup in Selenium
+20) How to handle Frames in Selenium
+21) How to find total number of links in Web Page
+22) How to find the broken Links
+23) Why we use Split method
+24) Current version in Selenium
+25) Explain the Framework. Oops concept in Framework. Which Exception you face in Framework. Which challenges you faced and How you overcome that challenges
+26) How to resolve GIT merge conflicts in Project
+27) Explain GIT basic commands
+28) What is javaScriptExecuter. Did you used
+29) How to upload File in Selenium
+30) How to read excel in selenium using Apache POI
+31) What are the Expected Conditions that can be used in Explicit Wait 
+32) What is the difference between NoSuchElementException and ElementNotVisibleException
+33) How to handle Web Table in Selenium
+34) How to verify the button is displayed or not in Web page
+35) How to scroll down the page to the particular Web Element
+
+Set -2
+📚📙TestNG Basic Interview Questions
+1) Tell me TestNG Annotation Sequence
+2) How to set the priorities in TestNG?
+3) What is the importance of testng.xml file?
+4) What are the advantages of TestNG
+5) Can you Explain TestNG Data Provider
+6) What are different TestNG Listener
+7) How to generate Report in TestNG
+8) How to run Test in Parallel in TestNG
+9) How to Enable and disable Test cases in TestNG
+10)What is invocationCount in TestNG?
+11)How to group the test cases in TestNG
+12)What is dependency in TestNG?
+13)What is the difference between @BeforeTest and @BeforeMethod
+14)What is the difference between soft assertion and hard assertion?. 
+15)What is the difference between @Factory and @DataProvider annotation?
+16)What are the common TestNG assertions?
+17) What is timeOut in TestNG?
+18)How to pass parameter in TestNG using testng.xml file
+
+Set-3
+📚📙Basic Cucumber Interview Question
+1) What is BDD
+2) What is the difference between TDD and BDD
+3) Describe Cucumber Feature File, Step Definition File and Test Runner file
+4) What is the difference between Scenario and Scenario Ouline
+5) What is Cucumber tags
+6) Explain keyword Background in the Cucumber framework?
+7) What is Data tables in cucumber
+8) What are Cucumber Hooks
+9) What is Gherkin Language. What are the advantage of Cucumber
+10) Can we integrate POM with cucumber
+11) Explain keyword Examples in the Cucumber framework?
