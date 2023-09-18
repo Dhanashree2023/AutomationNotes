@@ -1,0 +1,17 @@
+//Interview Question : How to find the Total no of links in the program
+package Interview_Practice;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
+public class Total_links {
+	public static void main(String[] args) {	
+		    WebDriverManager.chromedriver().setup();
+			WebDriver driver = new ChromeDriver();
+			driver.manage().window().maximize();	
+			 driver.get("https://www.makeinjava.com");		
+			 int numberOfLinks = driver.findElements(By.tagName("a")).size();
+		        // count no of links on page
+		     System.out.println("Number of links on Web Page :" +numberOfLinks );	
+	}
+}
