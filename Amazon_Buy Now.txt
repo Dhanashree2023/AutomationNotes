@@ -1,0 +1,64 @@
+package Interview_Practice;
+import java.io.File;
+import java.io.IOException;
+import java.util.Iterator;
+import java.util.Set;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Amazon {
+	static WebDriver driver;
+	public static void snapshot(WebDriver driver, String name) throws IOException
+	{
+		TakesScreenshot ts = (TakesScreenshot)driver;
+		File src = ts.getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src, new File("C://Users//Amol//Desktop//Amazon_SS//"+ name +".png"));		
+	}
+	public static void main(String[] args) throws InterruptedException, IOException {
+		  
+		    WebDriverManager.chromedriver().setup();
+			WebDriver driver = new ChromeDriver();
+			driver.manage().window().maximize();			
+			driver.get("https://www.amazon.in/");
+			Thread.sleep(5000);
+			 snapshot(driver,"Amazon_Home_page");
+							
+			WebElement searchBox = driver.findElement(By.id("twotabsearchtextbox"));
+			searchBox.sendKeys("mobile");
+			Thread.sleep(5000);
+			 snapshot(driver,"SearchBox");
+			searchBox.submit();
+							
+			JavascriptExecutor js = (JavascriptExecutor)driver;
+			js.executeScript("window.scrollBy(0,500)");
+			
+			driver.findElement(By.linkText("Redmi 12C (Royal Blue, 4GB RAM, 64GB Storage)")).click();
+			Thread.sleep(5000);
+			 snapshot(driver,"Select_Mobile");
+				
+			Set<String> s=driver.getWindowHandles();			
+			Iterator<String> it=s.iterator();		
+			String parentWindowId = it.next();			
+			String childWindow =it.next();		
+			System.out.println("Parent Window Popup ID:"+parentWindowId);
+			driver.switchTo().window(childWindow);
+			System.out.println("Child Window Popup ID:"+childWindow);
+			
+			JavascriptExecutor js1 = (JavascriptExecutor)driver;
+			js1.executeScript("window.scrollBy(0,500)");			
+			Thread.sleep(5000);
+			 snapshot(driver,"pic4");
+			
+			WebElement BuyNow = driver.findElement(By.id("buy-now-button"));
+			BuyNow.click();
+			Thread.sleep(5000);		
+	}
+}
