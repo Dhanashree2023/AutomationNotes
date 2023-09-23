@@ -1,0 +1,41 @@
+Cucumber With TestNG
+
+Step - 1
+Remove Junit Dependency
+Add TestNG dependency
+Add Cucumber TestNG dependency
+<!-- https://mvnrepository.com/artifact/org.testng/testng -->
+<dependency>
+    <groupId>org.testng</groupId>
+    <artifactId>testng</artifactId>
+    <version>7.4.0</version>
+    <scope>test</scope>
+</dependency>
+
+<!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-testng -->
+<dependency>
+    <groupId>io.cucumber</groupId>
+    <artifactId>cucumber-testng</artifactId>
+    <version>7.3.4</version>
+</dependency>
+
+Save POM.xml
+
+2) Step -2
+Update Maven Project
+Right click on POM.xml-->Select Maven-->Update Project
+
+3) Step-3
+Open TestRunner File
+Comment @Runwith(Cucumber.class)
+
+Instead of Junit import, use TestNG impot
+add import io.cucumber.testng.AbstractTestNGCucumberTests;
+Extend this class from "AbstractTestNGCucumberTests"
+
+public class TestRunner extends AbstractTestNGCucumberTests{
+
+}
+
+Step-4 
+Create TestNG.xml File
