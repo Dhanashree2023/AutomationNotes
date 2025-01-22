@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="methods" name="Parallel Execution in TestNG">
+  <test  name="Test Parallel">
+    <classes>
+      <class name="Examples.Ex4_Parallel"/>
+    </classes>
+  </test> <!-- Test Parallel -->
+</suite> <!-- Parallel Execution in TestNG -->
